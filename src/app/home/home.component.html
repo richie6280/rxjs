@@ -1,0 +1,15 @@
+<p>home works!</p>
+<a [routerLink]="'/detail'" [queryParams]="d" *ngFor="let d of data">{{d.id}} go<br></a>
+
+<div class="" *ngFor="let hero of config">
+    {{hero?.heroesUrl}}<br>
+    {{hero?.textfile}}<br>
+    {{hero?.date}}
+    <button (click)="delete(hero)">delete</button>
+</div>
+
+<input type="text" [(ngModel)]="heroesUrl">
+<input type="text" [(ngModel)]="textfile">
+<input type="text" [(ngModel)]="date">
+
+<button (click)="add()">add</button>
